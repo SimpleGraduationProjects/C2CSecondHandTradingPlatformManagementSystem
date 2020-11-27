@@ -34,10 +34,10 @@ public class ForgetController {
                           @RequestParam String code, @RequestParam String token) {
         Map<String, Integer> map = new HashMap<>();
         String name = request.getParameter("name");
-        String phont = request.getParameter("phont");
+        String phone = request.getParameter("phone");
         if (!StringUtils.getInstance().isNullOrEmpty(name)) {
             request.getSession().setAttribute("name", name);
-            request.getSession().setAttribute("phont", phont);
+            request.getSession().setAttribute("phone", phone);
         }
         String checkCodeToken = (String) request.getSession().getAttribute("token");
         if (StringUtils.getInstance().isNullOrEmpty(checkCodeToken) || !checkCodeToken.equals(token)) {
