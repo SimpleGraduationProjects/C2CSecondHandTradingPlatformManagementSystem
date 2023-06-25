@@ -597,7 +597,7 @@ public class UserController {
                 return "redirect:publish_product.do?error=请插入图片";
             }
             String random;
-            String path = "H:\\", save = "";
+            String path = "D:\\", save = "";
             random = "image\\" + StringUtils.getInstance().getRandomChar() + System.currentTimeMillis() + ".jpg";
             StringBuilder thumbnails = new StringBuilder();
             thumbnails.append(path);
